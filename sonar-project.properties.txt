@@ -1,0 +1,40 @@
+# Note: It is not recommended to use the colon ':' character in the projectKey
+sonar.projectKey=ProjecDotNetDemoApp
+sonar.projectVersion=1.2.0
+sonar.projectName=DotNetDemoApp
+
+sonar.sourceEncoding=UTF-8
+
+# Enable the Visual Studio bootstrapper
+sonar.visualstudio.enable=true
+
+# To prevent any issues while analyzing multiple solutions containing projects with similar keys
+sonar.dotnet.key.generation.strategy=safe
+
+# This property is set because it is required by the SonarQube Runner.
+# But it is not taken into account because the location of the source
+# code is retrieved from the .sln and .csproj files.
+sonar.sources=.
+sonar.language=cs
+sonar.dotnet.visualstudio.solution.file=Equinox.sln
+sonar.dotnet.excludeGeneratedCode=true
+sonar.dotnet.4.0.sdk.directory=C:/Windows/Microsoft.NET/Framework/v4.0.30319
+sonar.dotnet.version=4.0 
+ 
+sonar.sourceEncoding=UTF-8
+
+# This property is set because it is required by the SonarQube Runner.
+# But it is not taken into account because the location of the source
+# code is retrieved from the .sln and .csproj files.
+sonar.sources=.
+
+# exclusions
+# Properties/AssemblyInfo.cs
+# WPF generated files (in obj *.g.cs, g.i.cs, ...)
+# MiniMods
+# Tests
+# WCF generated service contracts
+# nuget packages
+sonar.exclusions=**/Properties/*.cs,**/*.g.cs,**/obj/**.cs,**/MiniMods/*.cs,**/Tests/**/*.cs,**/Service References/**.cs,**/packages/**.*,**/*_Should.cs
+
+
